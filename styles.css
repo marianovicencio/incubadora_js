@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Fonseca';
+    src: url('fonts/Fonseca-Regular.ttf') format('truetype');
+}
+
+body {
+    background: url('Bebé En El Vientre.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Fonseca', sans-serif; 
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 40px;
+    color: black;
+}
+
+.main_menu {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main_menu h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #2a2929;
+}
+
+.main_menu input {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 40px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px; 
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: #2a2929;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.serial-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    width: 100%; 
+}
+
+#temperature-display {
+    font-family: 'Fonseca', sans-serif;
+    color: #333;
+    font-weight: bold;
+    font-size: 40px; 
+    text-align: center; 
+}
+
+.fan-speed-box {
+    position: absolute;
+    bottom: 20px;  
+    right: 20px;   
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.fan-speed-box h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #2a2929;
+}
+
+#rpm-display {
+    font-family: 'Fonseca', sans-serif;
+    color: #333;
+    font-weight: bold;
+    font-size: 30px; 
+    text-align: center;
+}
+
+.energy-box {
+    position: absolute;
+    bottom: 20px;  
+    left: 20px;   
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.energy-box h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #2a2929;
+}
+
+#wats-display {
+    font-family: 'Fonseca', sans-serif;
+    color: #333;
+    font-weight: bold;
+    font-size: 30px; 
+    text-align: center;
+}
