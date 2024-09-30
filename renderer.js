@@ -34,7 +34,6 @@ window.addEventListener("DOMContentLoaded", function () {
   port.on("open", function () {
     console.log("Serial port opened");
   });
-///hola mundo
   port.on("error", function (err) {
     console.error("Error: ", err.message);
   });
