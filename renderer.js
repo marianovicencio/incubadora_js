@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const dutyCycleSlider_fan = document.getElementById("duty-cycle-slider-fan");
   const watsDisplay = document.getElementById("wats-display");
 
-  const port = new SerialPort({ path: 'COM5', baudRate: 9600 });
+  const port = new SerialPort({ path: 'COM6', baudRate: 9600 });
 
   port.on("open", function () {
     console.log("Serial port opened");
@@ -37,7 +37,6 @@ window.addEventListener("DOMContentLoaded", function () {
   port.on("error", function (err) {
     console.error("Error: ", err.message);
   });
-
   port.on("readable", function () {
     const data = port.read().toString();
     console.log("Serial data received:", data); 
@@ -49,7 +48,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     parts.forEach(part => {
       if (part.startsWith('T')) {
-        temperature = parseInt(part.slice(1), 10); 
+        temperature = parseFloat(part.slice(1)); 
         console.log("Temperature:", temperature);
         temperatureDisplay.textContent = `${temperature}°C`;
       } else if (part.startsWith('R')) {
