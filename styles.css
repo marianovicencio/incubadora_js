@@ -1,3 +1,4 @@
+/* Tu fuente personalizada */
 @font-face {
     font-family: 'Fonseca';
     src: url('fonts/Fonseca-Regular.ttf') format('truetype');
@@ -8,25 +9,24 @@ body {
     background-size: cover; 
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     font-family: 'Fonseca', sans-serif; 
 }
 
+/* Posicionar el título */
 .title {
     position: absolute;
     top: 10px;
     left: 10px;
 }
 
+/* Estilo del título */
 .title h1 {
     margin: 0;
     font-size: 40px;
     color: black;
 }
 
+/* Menú principal */
 .main_menu {
     position: absolute;
     top: 100px;
@@ -52,7 +52,12 @@ body {
     width: 200px;
 }
 
+/* Contenido central */
 .content {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
     background-color: rgba(255, 255, 255, 0.8); 
     padding: 40px; 
     border-radius: 50%; 
@@ -88,6 +93,7 @@ h3 {
     text-align: center; 
 }
 
+/* Caja de velocidad del ventilador */
 .fan-speed-box {
     position: absolute;
     bottom: 20px;  
@@ -113,6 +119,7 @@ h3 {
     text-align: center;
 }
 
+/* Caja de energía */
 .energy-box {
     position: absolute;
     bottom: 20px;  
@@ -136,4 +143,18 @@ h3 {
     font-weight: bold;
     font-size: 30px; 
     text-align: center;
+}
+
+/* Estilos para el gráfico */
+.graphs {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 400px;
+    height: 200px;
+}
+
+.graphs canvas {
+    width: 100%;
+    height: 100%;
 }
