@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const temperatureDisplay = document.getElementById("temperature-display");
   const rpmDisplay = document.getElementById("rpm-display");
   const dutyCycleSlider_luz = document.getElementById("duty-cycle-slider-luz");
-  // const dutyCycleSlider_fan = document.getElementById("duty-cycle-slider-fan"); // Comentado ya que no está en el HTML
+  const dutyCycleSlider_fan = document.getElementById("duty-cycle-slider-fan"); // Comentado ya que no está en el HTML
   const watsDisplay = document.getElementById("wats-display");
 
   // Configuración inicial del gráfico
@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const port = new SerialPort({ path: 'COM6', baudRate: 9600 });
+  const port = new SerialPort({ path: 'COM7', baudRate: 9600 });
 
   port.on("open", function () {
     console.log("Serial port opened");
@@ -161,12 +161,12 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   // Si tienes el control del ventilador, descomenta y ajusta según sea necesario
-  /*
+  
   dutyCycleSlider_fan.addEventListener("input", function () {
     const dutyCycle_fan = dutyCycleSlider_fan.value;
     console.log("Fan Duty Cycle:", dutyCycle_fan);
     port.write(`F${dutyCycle_fan}\n`);
   });
-  */
+
 
 });
