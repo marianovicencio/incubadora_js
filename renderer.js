@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const temperatureDisplay = document.getElementById("temperature-display");
   const rpmDisplay = document.getElementById("rpm-display");
   const dutyCycleSlider_luz = document.getElementById("duty-cycle-slider-luz");
-  const dutyCycleSlider_fan = document.getElementById("duty-cycle-slider-fan"); // Comentado ya que no está en el HTML
+  const dutyCycleSlider_fan = document.getElementById("duty-cycle-slider-fan"); 
   const watsDisplay = document.getElementById("wats-display");
 
   // Configuración inicial del gráfico
@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const port = new SerialPort({ path: 'COM7', baudRate: 9600 });
+  const port = new SerialPort({ path: 'COM5', baudRate: 9600 });
 
   port.on("open", function () {
     console.log("Serial port opened");
@@ -134,12 +134,6 @@ window.addEventListener("DOMContentLoaded", function () {
         data.datasets[1].data.push(rpm);
 
         // Limitar el número de puntos en el gráfico (opcional)
-        const maxDataPoints = 50;
-        if (data.labels.length > maxDataPoints) {
-          data.labels.shift();
-          data.datasets[0].data.shift();
-          data.datasets[1].data.shift();
-        }
 
         myChart.update();
 
