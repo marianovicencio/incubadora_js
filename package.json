@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "chart.js": "^4.4.4",
     "electron": "^31.4.0",
     "serialport": "^12.0.0"
   },

@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadatos y enlaces -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Usuario Incubadora</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Importar fuente -->
     <link href="https://fonts.cdnfonts.com/css/fonseca" rel="stylesheet">     
-    <style>
-        @import url('https://fonts.cdnfonts.com/css/fonseca');
-    </style>
 </head>
 <body>
     <div class="title">
         <h1>Interfaz de Incubadora</h1>
     </div>
     <div class="main_menu">
-        <!--<h3>Seleccionar Temperatura</h3>-->
-        <!--<input type="number" id="temperature-input" placeholder="Ingrese temperatura" />-->
         <h3>Control PWM Ampolleta</h3>
         <input type="number" id="duty-cycle-slider-luz" min="0" max="255" value="0">
-        <!--<h3>Control PWM Ventilador</h3>-->
-        <!--<input type="range" id="duty-cycle-slider-fan" min="155" max="255" value="0">-->
+        <h3>Control PWM Ventilador</h3>
+        <input type="number" id="duty-cycle-slider-fan" min="0" max="255" value="0">
     </div>
     <div class="content">
         <h3>Temperatura interna: </h3>
         <div class="serial-content">
-            <p id="temperature-display"></p> 
+            <p id="temperature-display">--°C</p> 
         </div>
-        <div class="fan-speed-box">
-            <h3>Velocidad del Ventilador</h3>
-            <div class="serial-content">
-                <p id="rpm-display"></p> 
-            </div>
-        </div>
-        <script src="renderer.js"></script>
     </div>  
-        <div class="energy-box">
-            <h3>Energia de la Ampolleta</h3>
-                <p id="wats-display"></p>   
-            </div> 
+    <div class="fan-speed-box">
+        <h3>Velocidad del Ventilador</h3>
+        <div class="serial-content">
+            <p id="rpm-display">-- RPM</p> 
+        </div>
+    </div>
+    <div class="energy-box">
+        <h3>Energia de la Ampolleta</h3>
+        <p id="wats-display">-- W</p>   
+    </div>
+    <!-- Div para el gráfico -->
+    <div class="graphs">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Incluye Chart.js y tu script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="renderer.js"></script>
 </body>
 </html>
